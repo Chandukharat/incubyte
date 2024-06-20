@@ -36,3 +36,11 @@ test('returns the sum of multiple numbers', () => {
   test('returns the sum of numbers with a different custom delimiter', () => {
     expect(add("//|\n1|2|3")).toBe(6);
   });
+
+  test('throws an exception for negative numbers', () => {
+    expect(() => add("1,-2,3,-4")).toThrowError("negative numbers not allowed -2,-4");
+  });
+  
+  test('throws an exception for negative numbers with custom delimiter', () => {
+    expect(() => add("//;\n1;-2;3;-4")).toThrowError("negative numbers not allowed -2,-4");
+  });
