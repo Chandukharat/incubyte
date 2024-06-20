@@ -11,3 +11,12 @@ test('returns the number itself when one number is provided', () => {
 test('returns the sum of two numbers', () => {
   expect(add("1,5")).toBe(6);
 });
+
+
+test('returns the sum of multiple numbers', () => {
+    expect(add("1,2,3,4,5")).toBe(15);
+  });
+  
+  test('returns the sum of more than two numbers', () => {
+    expect(add("10,20,30,40")).toBe(100);
+  });
