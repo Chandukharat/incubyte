@@ -2,8 +2,10 @@ function add(numbers) {
     if (numbers === "") {
       return 0;
     }
+
+    const normalizedNumbers = numbers.replace(/\n/g, ',');
     
-    const numberArray = numbers.split(',').map(Number);
+    const numberArray = normalizedNumbers.split(',').map(Number);
     return numberArray.reduce((sum, num) => sum + num, 0);
   }
   

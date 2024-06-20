@@ -20,3 +20,11 @@ test('returns the sum of multiple numbers', () => {
   test('returns the sum of more than two numbers', () => {
     expect(add("10,20,30,40")).toBe(100);
   });
+
+  test('returns the sum of numbers with new lines between them', () => {
+    expect(add("1\n2,3")).toBe(6);
+  });
+  
+  test('returns the sum of numbers with only new lines between them', () => {
+    expect(add("1\n2\n3")).toBe(6);
+  });
