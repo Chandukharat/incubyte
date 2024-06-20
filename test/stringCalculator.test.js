@@ -28,3 +28,11 @@ test('returns the sum of multiple numbers', () => {
   test('returns the sum of numbers with only new lines between them', () => {
     expect(add("1\n2\n3")).toBe(6);
   });
+
+  test('returns the sum of numbers with a custom delimiter', () => {
+    expect(add("//;\n1;2")).toBe(3);
+  });
+  
+  test('returns the sum of numbers with a different custom delimiter', () => {
+    expect(add("//|\n1|2|3")).toBe(6);
+  });
